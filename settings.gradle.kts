@@ -19,5 +19,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ToDoListApp"
 include(":app")
