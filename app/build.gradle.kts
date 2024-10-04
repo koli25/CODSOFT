@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.todolistapp"
+    namespace = "com.example.dailyquotesapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.todolistapp"
+        applicationId = "com.example.dailyquotesapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
