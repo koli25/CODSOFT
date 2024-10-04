@@ -17,7 +17,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private TextView quoteTextView;
-    private Button favoriteButton;
     private List<String> quotes;
     private String currentQuote;
 
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         quoteTextView = findViewById(R.id.quoteTextView);
         Button shareButton = findViewById(R.id.shareButton);
-        favoriteButton = findViewById(R.id.favoriteButton);
+        Button favoriteButton = findViewById(R.id.favoriteButton);
 
         // Initialize quotes list
         quotes = new ArrayList<>();
