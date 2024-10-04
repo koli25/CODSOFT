@@ -1,5 +1,8 @@
 package com.example.dailyquotesapp;
 
+import static com.example.todolistapp.R.*;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
