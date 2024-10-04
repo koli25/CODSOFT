@@ -12,30 +12,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AddEditTaskActivity extends AppCompatActivity {
 
-    private SQLiteOpenHelper dbHelper;
-    private SQLiteDatabase database;
+    public SQLiteDatabase database;
     private EditText taskTitleEditText;
     private EditText taskDescriptionEditText;
     private EditText taskDueDateEditText;
     private Spinner taskPrioritySpinner;
-    private Button saveTaskButton;
-    private int taskPosition = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_task);
 
-        dbHelper = new DatabaseHelper(this);
+        SQLiteOpenHelper dbHelper = new DatabaseHelper(this);
         database = dbHelper.getWritableDatabase();
         taskTitleEditText = findViewById(R.id.task_title);
         taskDescriptionEditText = findViewById(R.id.task_description);
         taskDueDateEditText = findViewById(R.id.task_due_date);
         taskPrioritySpinner = findViewById(R.id.task_priority);
+        Button saveTaskButton;
         saveTaskButton = findViewById(R.id.save_task_button);
 
         Intent intent = getIntent();
-        taskPosition = intent.getIntExtra("TASK_POSITION", -1);
+        int taskPosition = intent.getIntExtra("TASK_POSITION", -1);
 
         if (taskPosition != -1) {
             // Edit existing task
