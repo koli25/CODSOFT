@@ -19,8 +19,6 @@ import missing.namespace.R;
 public class MainActivity extends AppCompatActivity {
 
     private TextView currentTime;
-    private Button setAlarmButton;
-    private ListView alarmListView;
     private AlarmAdapter alarmAdapter;
     private ArrayList<AlarmModel> alarmList;
     private AlarmDatabaseHelper dbHelper;
@@ -31,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         currentTime = findViewById(R.id.current_time);
-        setAlarmButton = findViewById(R.id.set_alarm_button);
-        alarmListView = findViewById(R.id.alarm_list);
+        Button setAlarmButton = findViewById(R.id.set_alarm_button);
+        ListView alarmListView = findViewById(R.id.alarm_list);
 
         dbHelper = new AlarmDatabaseHelper(this);
         alarmList = dbHelper.getAllAlarms();
