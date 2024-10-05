@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+import missing.namespace.R;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView currentTime;
